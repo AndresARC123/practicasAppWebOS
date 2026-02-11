@@ -1,7 +1,7 @@
 const user = "AndresARC123";
 const repo = "practicasAppWebOS";
 
-/* PERFIL */
+//PERFIL 
 fetch(`https://api.github.com/users/${user}`)
   .then((r) => r.json())
   .then((d) => {
@@ -11,7 +11,7 @@ fetch(`https://api.github.com/users/${user}`)
     ubicacion.textContent = d.location;
   });
 
-/* REPOSITORIOS (AHORA 10) */
+// repositorios
 fetch(
   `https://api.github.com/users/${user}/repos?sort=updated&per_page=10&type=owner&direction=desc`,
 )
@@ -31,7 +31,7 @@ fetch(
     });
   });
 
-/* FOLLOWERS */
+//seguidores
 fetch(`https://api.github.com/users/${user}/followers?per_page=5`)
   .then((r) => r.json())
   .then((data) => {
@@ -42,7 +42,7 @@ fetch(`https://api.github.com/users/${user}/followers?per_page=5`)
     });
   });
 
-/* COMMITS AUTOMÁTICOS */
+//commits
 let ultimo = null;
 
 async function revisar() {
@@ -80,3 +80,4 @@ function pintar(c) {
 
 setInterval(revisar, 15000);
 revisar();
+
