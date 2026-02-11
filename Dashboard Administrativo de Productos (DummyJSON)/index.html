@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Panel de Administración</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <h1>ShopMaster Admin</h1>
+      <div class="search-box">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Buscar producto (Enter)..."
+        />
+        <button
+          id="btnNew"
+          onclick="window.location.href = 'nuevoProducto.html'"
+        >
+          + Nuevo Producto
+        </button>
+      </div>
+    </header>
+
+    <main class="dashboard-container">
+      <section class="content">
+        <div class="filters-top">
+          <div class="filter-group">
+            <label for="categoryFilter">Categoría:</label>
+            <select id="categoryFilter">
+              <option value="">Todas las categorías</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label for="sortFilter">Ordenar por:</label>
+            <select id="sortFilter">
+              <option value="title-asc">Título (A-Z)</option>
+              <option value="title-desc">Título (Z-A)</option>
+              <option value="price-asc">Precio (Menor a Mayor)</option>
+              <option value="price-desc">Precio (Mayor a Menor)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="table-container">
+          <table id="productsTable">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Miniatura</th>
+                <th>Título</th>
+                <th>Precio</th>
+                <th>Stock</th>
+                <th>Categoría</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+          </table>
+        </div>
+
+        <div class="pagination">
+          <button id="btnPrev">« Anterior</button>
+          <span id="pageInfo">Página 1</span>
+          <button id="btnNext">Siguiente »</button>
+        </div>
+      </section>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>

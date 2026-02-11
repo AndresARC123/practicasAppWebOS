@@ -1,0 +1,51 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+/* Estilo base para la tarjeta del personaje */
+.practice-card {
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  color: #333;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  margin: 10px;
+  max-width: 300px; /* Ancho máximo para que no se estiren demasiado */
+  display: inline-block; /* Para que se pongan una al lado de otra */
+  vertical-align: top;
+}
+
+/* Efecto al pasar el mouse por encima */
+.practice-card:hover {
+  border-color: #e67e22;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+.practice-title {
+  color: #e67e22; /* Color naranja estilo Dragon Ball */
+  margin: 10px 0;
+}
+
+.practice-description {
+  font-size: 0.9rem;
+  color: #666;
+  height: 100px;
+  overflow-y: auto; /* Por si la descripción es muy larga */
+  margin-bottom: 10px;
+}
+
+#contenedor-personajes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
